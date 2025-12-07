@@ -24,6 +24,32 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
+  <style>
+    .video-background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-background iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 150%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+}
+
+  </style>
+
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
@@ -69,12 +95,15 @@
     <section id="hero" class="hero section dark-background">
 
       <div class="video-background">
-        <video autoplay="true" loop="" playsinline="">
-          <source src="https://youtu.be/1nAUFsPXKuk" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+        <iframe 
+            src="https://www.youtube.com/embed/1nAUFsPXKuk?si=Y__Ap9s-InZu6pc1&controls=0&autoplay=1&mute=1&loop=1&playlist=1nAUFsPXKuk" 
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen>
+        </iframe>
         <div class="video-overlay"></div>
-      </div>
+    </div>
+    
 
       <div class="hero-content">
 
